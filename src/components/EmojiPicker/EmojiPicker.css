@@ -1,0 +1,118 @@
+.emoji-picker {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  width: 300px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 200;
+  overflow: hidden;
+  animation: slideInUp 0.15s ease;
+}
+
+.emoji-search-wrap {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.emoji-search {
+  width: 100%;
+  padding: 7px 12px;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  font-size: 13px;
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.emoji-search:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.emoji-categories {
+  display: flex;
+  padding: 6px 8px;
+  gap: 2px;
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: auto;
+}
+
+.emoji-cat-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.emoji-cat-btn:hover { background: var(--bg-hover); }
+.emoji-cat-btn.active { background: var(--bg-active); }
+
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 8px;
+  gap: 2px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.emoji-btn {
+  width: 34px;
+  height: 34px;
+  font-size: 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.emoji-btn:hover {
+  background: var(--bg-hover);
+  transform: scale(1.2);
+}
+
+/* Reaction Bar */
+.reaction-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  position: absolute;
+  z-index: 150;
+  bottom: calc(100% + 6px);
+  animation: fadeInScale 0.15s ease;
+  white-space: nowrap;
+}
+
+.reaction-option {
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.reaction-option:hover {
+  transform: scale(1.35);
+  background: var(--bg-hover);
+}
